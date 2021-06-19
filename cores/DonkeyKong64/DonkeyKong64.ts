@@ -604,6 +604,8 @@ export class SaveContext extends API.BaseObj implements API.ISaveContext {
 }
 
 export class DonkeyKong64 implements ICore, API.IDK64Core {
+    heap_start: number = -1;
+    heap_size: number = -1;
     header = 'NDO';
     ModLoader: IModLoaderAPI = {} as IModLoaderAPI;
     eventTicks: Map<string, Function> = new Map<string, Function>();
